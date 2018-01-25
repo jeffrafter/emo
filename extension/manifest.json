@@ -12,6 +12,14 @@
     "default_popup": "popup.html"
   },
   "permissions": [
-   "activeTab"
-   ]
+    "activeTab"
+  ],
+  "content_scripts": [{
+    "matches": [
+      "github.com/*/*/issues/*",
+      "github.com/*/*/pull/*"
+    ],
+    "js": ["inject.js"]
+  }],
+  "web_accessible_resources": ["script.js"]
 }
