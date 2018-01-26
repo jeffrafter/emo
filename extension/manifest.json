@@ -14,6 +14,9 @@
   "permissions": [
     "activeTab"
   ],
+  "background": {
+    "scripts": ["background.js"]
+  },
   "content_scripts": [{
     "matches": [
       "https://github.com/*/*/issues/*",
