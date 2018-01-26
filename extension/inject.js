@@ -7,7 +7,6 @@ for (let i = 0; i < pops.length; i++) {
   let pop = pops[i]
   let form = pop.getElementsByClassName("js-pick-reaction")[0]
 
-
   // Setup emoForm
   let emoForm = form.cloneNode(true)
   let emoDesc = emoForm.getElementsByClassName("js-reaction-description")[0]
@@ -17,7 +16,6 @@ for (let i = 0; i < pops.length; i++) {
   emoForm.setAttribute("action", "")
   emoForm.classList.add("mt-4")
   emoDesc.innerHTML = "Add to your private diary"
-
 
   emoReactionButtons[0].innerHTML = "<g-emoji alias=\"rage\" class=\"emoji-result\" fallback-src=\"https://assets-cdn.github.com/images/icons/emoji/unicode/1f621.png\" ios-version=\"6.0\">😡</g-emoji>"
   emoReactionButtons[0].setAttribute("value", "😡" )
@@ -52,8 +50,8 @@ for (let i = 0; i < pops.length; i++) {
       let url = location
       let object_id = el.closest(".js-comment").id
       let actor = user
-      let author = el.closest(".timeline-comment-avatar").firstChild.attribute("href")
-      let text = "test"
+      let author = "username" // TODO: Figure out how to grab this from the DOM
+      let text = "test"       // TODO: Figure out how to grab this from the DOM
 
       chrome.runtime.sendMessage({object_id: object_id, url: url, reaction: reaction, text: text, actor: actor, author: author});
     })
