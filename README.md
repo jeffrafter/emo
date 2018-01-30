@@ -12,6 +12,6 @@ Documenting emotional responses in GitHub by [@jeffrafter](//github.com/jeftraft
 ## Use it
 
 1. [Get the Chrome plugin](https://github.com/jeffrafter/emo/releases/latest)
-2. Install the Chrome plugin
-3. Login to the server
-4. Emote
+1. Install the Chrome plugin
+1. Login to the server / Authorize the app
+1. Emote
