@@ -1,7 +1,7 @@
 chrome.runtime.onMessage.addListener(function (msg, sender) {
   let data = msg
   console.log(data)
-
+  
   // Handle the form submit via JS
   var XHR = new XMLHttpRequest()
   var urlEncodedData = ""
@@ -31,7 +31,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender) {
   });
 
   // Set up our request
-  XHR.open('POST', 'https://seemly-cello.glitch.me/react')
+  XHR.open('POST', 'https://emo-oauth.glitch.me/emote')
 
   // Add the required HTTP header for form data POST requests
   XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')

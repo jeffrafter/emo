@@ -41,19 +41,33 @@ for (let i = 0; i < pops.length; i++) {
   emoReactionButtons[5].setAttribute("value", "😍" )
   emoReactionButtons[5].setAttribute("data-reaction-label", "Heart eyes" )
 
+  let emoEntry = document.createElement('input')
+  emoEntry.setAttribute("name", "entry")
+  emoEntry.setAttribute("placeholder", "Dear diary...")
+  emoEntry.setAttribute("style", "margin-left:8px;width:200px;display:block")
+  emoForm.appendChild(emoEntry)
 
   Array.prototype.forEach.call(emoReactionButtons, function(el, i){
     el.classList.add("js-emo-reaction")
     el.addEventListener("click", function( event ) {
       event.preventDefault()
       let reaction = el.getAttribute("value")
-      let url = location
       let object_id = el.closest(".js-comment").id
-      let actor = user
-      let author = "username" // TODO: Figure out how to grab this from the DOM
-      let text = "test"       // TODO: Figure out how to grab this from the DOM
+      let url = [location.protocol, '//', location.host, location.pathname, '#', object_id].join('')
+      let author = el.closest(".js-comment").querySelector('.author').innerHTML
+      let actor = document.querySelector('meta[name=user-login]').getAttribute('content')
+      let text = el.closest(".js-pick-reaction").querySelector('input[name=entry]').value
+      let data = {
+        object_id: object_id,
+        url: url,
+        reaction: reaction,
+        text: text,
+        actor: actor,
+        author: author
+      }
 
-      chrome.runtime.sendMessage({object_id: object_id, url: url, reaction: reaction, text: text, actor: actor, author: author});
+      console.log(data)
+      chrome.runtime.sendMessage(data)
     })
   })
 
