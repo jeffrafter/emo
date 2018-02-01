@@ -19,19 +19,20 @@
 1. [Login to the server](https://emo-oauth.glitch.me/) / Authorize the app
 1. Emote
 
-# Installing the extension for development
+## Development
+### Installing the extension for development
 
 1. Clone this repository
 1. Open [chrome://extensions/](chrome://extensions/)
 1. Click `Developer Mode`
 1. Click `Load Unpacked Extension` and choose the `extension` folder
 
-# Releases
+### Releases
 
 1. Open [chrome://extensions/](chrome://extensions/)
 1. Click `Pack Extension` (specifying the `.crx` & `.pem`)
 
-# Troubleshooting
+### Troubleshooting
 
 1. If you make a change to the glitch server you get logged out
 1. Chrome plugin won't reload (remove and re-add it)
