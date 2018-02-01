@@ -1,7 +1,9 @@
-![big-emo](https://user-images.githubusercontent.com/896475/35589938-59e821ac-05d3-11e8-918e-5f31f131e5de.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/896475/35589938-59e821ac-05d3-11e8-918e-5f31f131e5de.png" alt="">
+  <h1 align="center">Emo</h1>
+  <p align="center">Documenting emotional responses in GitHub by <a href="//github.com/jeftrafter">@jeffrafter</a> and <a href="//github.com/pmarsceill">@pmarsceill</a>.</p>
+</p>
 
-# Emo
-Documenting emotional responses in GitHub by [@jeffrafter](//github.com/jeftrafter) and [@pmarsceill](//github.com/pmarsceill)
 
 ## Requirements
 
