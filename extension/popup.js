@@ -1,20 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var checkButton = document.getElementById('check')
+  const checkButton = document.getElementsByClassName('js-submit')[0]
   checkButton.addEventListener('click', function() {
-
-    chrome.tabs.getSelected(null, function(tab) {
-      d = document;
-
-      var f = d.createElement('form')
-      f.action = ''
-      f.method = 'post'
-      var i = d.createElement('input')
-      i.type = 'hidden'
-      i.name = 'url'
-      i.value = tab.url
-      f.appendChild(i)
-      d.body.appendChild(f)
-      f.submit()
-    })
-  }, false)
-}, false)
+    console.log("opening tab...")
+    chrome.tabs.create({url: 'http://seemly-cello.glitch.me' })
+  })
+});
