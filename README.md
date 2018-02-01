@@ -4,6 +4,7 @@
   <p align="center">Documenting emotional responses in GitHub by <a href="//github.com/jeftrafter">@jeffrafter</a> and <a href="//github.com/pmarsceill">@pmarsceill</a>.</p>
 </p>
 
+---
 
 ## Requirements
 
